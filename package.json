@@ -1,0 +1,24 @@
+{
+  "name": "the-alignment-trail",
+  "version": "1.0.0",
+  "description": "A PM survival game about navigating organizational alignment challenges",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "game",
+    "product-management",
+    "pm",
+    "alignment",
+    "oregon-trail",
+    "survival-game"
+  ],
+  "author": "Pierre Ortega",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/alignment-trail.git"
+  }
+}
