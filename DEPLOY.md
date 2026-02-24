@@ -126,7 +126,7 @@ start index.html
 ### Vercel CLI
 
 ```bash
-cd "c:\Users\Pierre Ortega\Documents\pierres-personal-os-main\04-Projects\Personal\builder-trail-game"
+cd path/to/builder-trail-game
 vercel --prod
 ```
 
@@ -147,7 +147,7 @@ npm install -g vercel
 
 Make sure you're in the right directory:
 ```bash
-cd "c:\Users\Pierre Ortega\Documents\pierres-personal-os-main\04-Projects\Personal\builder-trail-game"
+cd path/to/builder-trail-game
 ```
 
 ### Game doesn't load

@@ -251,7 +251,6 @@ MIT License - feel free to fork, modify, and use for your own projects!
 
 - **Concept inspired by**: [The Builder Trail](https://github.com/petergyang/builder-trail-game) by Peter Yang
 - **Original inspiration**: Oregon Trail (1971)
-- **Built by**: Pierre Ortega
 - **Theme**: PM alignment challenges (because shipping is easy, alignment is hard)
 
 ## 🐛 Known Issues
