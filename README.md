@@ -7,7 +7,7 @@
 
 ## 🎮 Play Now
 
-[Live Demo](#) _(Deploy to Vercel first!)_
+[Live Demo](https://builder-trail-game-two.vercel.app/)
 
 ## 📖 What Is This?
 
