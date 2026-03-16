@@ -5,7 +5,9 @@
   "main": "index.html",
   "scripts": {
     "start": "npx serve .",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod --yes",
+    "smoke:prod": "node scripts/smoke-prod.mjs",
+    "deploy:checked": "npm run deploy && npm run smoke:prod"
   },
   "keywords": [
     "game",
