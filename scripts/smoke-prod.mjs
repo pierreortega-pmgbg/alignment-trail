@@ -2,11 +2,15 @@ const BASE_URL = process.env.SITE_URL || 'https://builder-trail-game-two.vercel.
 
 const checks = [
   { path: '/', expectedStatus: 200 },
-  { path: '/index.html', expectedStatus: 200 },
+  { path: '/index.html', expectedStatus: [200, 301, 302, 308] },
   { path: '/game.js', expectedStatus: 200 },
-  { path: '/events.js', expectedStatus: 200 },
-  { path: '/scenes.js', expectedStatus: 200 },
   { path: '/style.css', expectedStatus: 200 },
+  { path: '/sprites.js', expectedStatus: 200 },
+  { path: '/rpg-content.js', expectedStatus: 200 },
+  { path: '/rpg-state.js', expectedStatus: 200 },
+  { path: '/dialogue.js', expectedStatus: 200 },
+  { path: '/quiz.js', expectedStatus: 200 },
+  { path: '/map.js', expectedStatus: 200 },
 ];
 
 function toUrl(path) {
@@ -19,11 +23,12 @@ async function run() {
 
   for (const check of checks) {
     const res = await fetch(toUrl(check.path), { redirect: 'manual' });
-    if (res.status === check.expectedStatus) {
+    const accepted = Array.isArray(check.expectedStatus) ? check.expectedStatus : [check.expectedStatus];
+    if (accepted.includes(res.status)) {
       console.log(`PASS ${check.path} -> ${res.status}`);
     } else {
       failed += 1;
-      console.error(`FAIL ${check.path} -> expected ${check.expectedStatus}, got ${res.status}`);
+      console.error(`FAIL ${check.path} -> expected ${accepted.join(', ')}, got ${res.status}`);
     }
   }
 
